@@ -155,7 +155,11 @@
 
             for (let j = diaAtual + 1; j < 31; j++) {
                 const dayElement = document.getElementById(`day-${j}`);
-                if (dayElement) {
+                if ((dayElement.search("Folga")>0)||((dayElement.search("F.")>0))) {
+                    //dayElement.classList.add('past');
+                    dayElement.innerHTML += '<br>'
+                    dayElement.innerHTML += `🏖`
+                } else {
                     //dayElement.classList.add('past');
                     dayElement.innerHTML += '<br>'
                     dayElement.innerHTML += `⌛`
