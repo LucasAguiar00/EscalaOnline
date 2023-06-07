@@ -171,9 +171,13 @@
             'Lucas' : ['T. 18h_Lucas', 'T. 15h_Lucas', 'T. 09h_Lucas', 'Folga_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'F. Feriado_Lucas', 'Folga_Lucas', 'T. 07h_Lucas', 'T. 06h_Lucas', 'T. 00h_Lucas', 'T. 18h_Lucas', 'Folga_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'Folga_Lucas', 'Folga_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'Folga_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas', 'T. 18h_Lucas'],
             'Leonardo' : ['T. 18h_Leonardo', 'T. 18h_Leonardo', 'Folga_Leonardo', 'Fol. F_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'F. Feriado_Leonardo', 'T. 12h_Leonardo', 'T. 10h_Leonardo', 'Folga_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'T. 12h_Leonardo', 'T. 12h_Leonardo', 'Folga_Leonardo', 'T. 06h_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'T. 18h_Leonardo', 'Folga_Leonardo', 'T. 18h_Leonardo', 'T. 12h_Leonardo', 'T. 18h_Leonardo', 'Folga_Leonardo', 'T. 00h_Leonardo', 'T. 12h_Leonardo', 'T. 12h_Leonardo'],
         }
-        funcionario['Lucas'][1+10]   ='T. 10h_Lucas'
-        funcionario['Lucas'][1+11]   ='T. 18h_Lucas'
-        funcionario['Lucas'][1+12]   ='T. 18h_Lucas'
+
+        function atualizar(){
+            funcionario['Lucas'][1+10]   ='T. 10h_Lucas'
+            funcionario['Lucas'][1+11]   ='T. 18h_Lucas'
+            funcionario['Lucas'][1+12]   ='T. 18h_Lucas'
+        }
+        
 
         function Definir_turno(vetor) {
             var dia = 1
@@ -202,41 +206,9 @@
         }
 
 
-        /*
-        definirTurno('T. 18h_Lucas',1)
-        definirTurno('T. 15h_Lucas',2)
-        definirTurno('T. 09h_Lucas',3)
-        definirTurno('Folga_Lucas',4)
-        definirTurno('T. 18h_Lucas',5)
-        definirTurno('T. 18h_Lucas',6)
-        definirTurno('T. 18h_Lucas',7)
-        definirTurno('F. Feriado_Lucas',8)
-        definirTurno('Folga_Lucas',9)
-        definirTurno('T. 07h_Lucas',10)
-        definirTurno('T. 06h_Lucas',11)
-        definirTurno('T. 00h_Lucas',12)
-        definirTurno('T. 18h_Lucas',13)
-        definirTurno('Folga_Lucas',14)
-        definirTurno('T. 18h_Lucas',15)
-        definirTurno('T. 18h_Lucas',16)
-        definirTurno('Folga_Lucas',17)
-        definirTurno('Folga_Lucas',18)
-        definirTurno('T. 18h_Lucas',19)
-        definirTurno('T. 18h_Lucas',20)
-        definirTurno('T. 18h_Lucas',21)
-        definirTurno('T. 18h_Lucas',22)
-        definirTurno('T. 18h_Lucas',23)
-        definirTurno('Folga_Lucas',24)
-        definirTurno('T. 18h_Lucas',25)
-        definirTurno('T. 18h_Lucas',26)
-        definirTurno('T. 18h_Lucas',27)
-        definirTurno('T. 18h_Lucas',28)
-        definirTurno('T. 18h_Lucas',29)
-        definirTurno('T. 18h_Lucas',30)*/
-
 
         // ... adicione mais chamadas à função definirTurno para os demais dias
-
+        atualizar()
         //marcarDiasPassados();
 
 
