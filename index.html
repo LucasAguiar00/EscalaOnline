@@ -69,7 +69,7 @@
 
 <body>
     <h1>Escala de Trabalho - Junho 2023</h1>
-    
+
     <span>
         <select name="funcionarios" id="funcionarios" onchange="selecionar_funcionario()">
             <option value="limpar"> </option>
@@ -79,7 +79,7 @@
     </span>
     <br><br>
 
-    
+
     <div class="calendar">
         <div class="day fds">Dom</div>
         <div class="day header">Seg</div>
@@ -157,7 +157,7 @@
                 const dayElement = document.getElementById(`day-${j}`);
                 //dayElement.classList.add('past');
                 dayElement.innerHTML += '<br>'
-                dayElement.innerHTML += `⌛`                
+                dayElement.innerHTML += `⌛`
             }
 
             const dayElement = document.getElementById(`day-${diaAtual}`);
@@ -166,7 +166,7 @@
             dayElement.innerHTML += `👨‍💼📊📈📁`
         }
 
-        funcionario = funcionario.JSON
+        
 
         /*
         funcionario = {
@@ -176,12 +176,12 @@
         }*/
 
         //teste
-        function atualizar(){
-            funcionario['Lucas'][10-1] = 'T. 10h_Lucas'
-            funcionario['Lucas'][11-1] = 'T. 18h_Lucas'
-            funcionario['Lucas'][12-1] = 'T. 18h_Lucas'
+        function atualizar() {
+            funcionario['Lucas'][10 - 1] = 'T. 10h_Lucas'
+            funcionario['Lucas'][11 - 1] = 'T. 18h_Lucas'
+            funcionario['Lucas'][12 - 1] = 'T. 18h_Lucas'
         }
-        
+
 
         function Definir_turno(vetor) {
             var dia = 1
@@ -193,7 +193,7 @@
 
         function selecionar_funcionario() {
             var colaborador = document.getElementById("funcionarios").value
-            
+
             limpar()
             atualizar()
             //console.log(`${funcionario}.${colaborador}`)
@@ -201,15 +201,26 @@
             marcarDiasPassados();
         }
 
-        function limpar(){
+        function limpar() {
             for (let i = 1; i < 32; i++) {
                 const dayElement = document.getElementById(`day-${i}`);
-                if (dayElement) {                
-                    dayElement.innerHTML = ' '                    
+                if (dayElement) {
+                    dayElement.innerHTML = ' '
                 }
             }
         }
 
+
+        fetch('funcionario.json')
+            .then(response => response.json()) // ou response.text() se o arquivo não for um JSON válido
+            .then(data => {
+                funcionario = data;
+                console.log(data);
+            })
+            .catch(error => {
+                // Trate quaisquer erros que possam ocorrer durante o processo
+                console.error('Ocorreu um erro:', error);
+            });
 
 
         // ... adicione mais chamadas à função definirTurno para os demais dias    
