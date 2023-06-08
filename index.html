@@ -166,7 +166,7 @@
             dayElement.innerHTML += `👨‍💼📊📈📁`
         }
 
-        
+
 
         /*
         funcionario = {
@@ -222,6 +222,22 @@
                 // Trate quaisquer erros que possam ocorrer durante o processo
                 console.error('Ocorreu um erro:', error);
             });
+
+        const fs = require('fs'); // Requer o módulo 'fs' para manipulação de arquivos
+
+        function atualizar_json(funcionario) {
+            const jsonConteudo = JSON.stringify(funcionario);
+
+            fs.writeFile('funcionario.json', jsonConteudo, 'utf8', (err) => {
+                if (err) {
+                    console.error('Ocorreu um erro ao atualizar o JSON:', err);
+                    return;
+                }
+
+                console.log('JSON atualizado com sucesso!');
+            });
+        }
+
 
 
         // ... adicione mais chamadas à função definirTurno para os demais dias    
