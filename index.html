@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
-
+<html>    
 <head>
     <title>Escala de Trabalho - Junho 2023</title>
+    
+
+
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
+            
+        }        
 
         .num_redondo {
             background-color: #018ccb;
@@ -30,12 +33,13 @@
             border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
+            border-radius: 15px;
         }
 
         .day:hover {
             transform: scale(1.2);
             background-color: lightblue;
-
+            cursor: pointer;
         }
 
         .day.header {
@@ -63,6 +67,30 @@
             background-color: rgba(133, 253, 129, 0.699);
             color: rgb(0, 0, 0);
             font-weight: bold;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #funcionarios{
+            position: absolute;
+            left: 80%;
+            top: 3%;           
+            font-size: 20pt;
+            width: 180px;
+
         }
     </style>
 </head>
@@ -77,6 +105,7 @@
             <option value="Leonardo">Leonardo</option>
         </select>
     </span>
+
     <br><br>
 
 
@@ -225,8 +254,8 @@
                 console.error('Ocorreu um erro:', error);
             });
 
-       
-            const fs = require('fs'); // Requer o módulo 'fs' para manipulação de arquivos
+
+        const fs = require('fs'); // Requer o módulo 'fs' para manipulação de arquivos
 
         function atualizar_json(funcionario) {
             const jsonConteudo = JSON.stringify(funcionario);
