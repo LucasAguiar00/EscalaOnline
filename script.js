@@ -80,7 +80,7 @@ function limpar() {
 
 function atualizar_campo_funcionario(){
     var vectorNames = Object.keys(funcionario)
-    var colaborador = document.getElementById("funcionarios").value    
+    var colaborador = document.getElementById("funcionarios")    
     vectorNames.forEach(element => {
         
             colaborador.innerHTML += `<option value="${element}">${element}</option>`
