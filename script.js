@@ -78,6 +78,14 @@ function limpar() {
     }
 }
 
+function atualizar_campo_funcionario(){
+    var colaborador = document.getElementById("funcionarios").value
+    funcionario.forEach(element => {
+        console.log(element)
+    });
+
+}
+
 
 fetch('funcionario.JSON')
     .then(response => response.json()) // ou response.text() se o arquivo não for um JSON válido
