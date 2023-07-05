@@ -79,10 +79,13 @@ function limpar() {
 }
 
 function atualizar_campo_funcionario(){
-    const vectorNames = Object.keys(funcionario)
-    var colaborador = document.getElementById("funcionarios").value
+    var vectorNames = Object.keys(funcionario)
+    var colaborador = document.getElementById("funcionarios").value    
     vectorNames.forEach(element => {
-        console.log(element)
+        if (element!="limpar"){
+            colaborador += `<option value="${element}">${element}</option>`
+            console.log(element)
+        }        
     });
 
 }
