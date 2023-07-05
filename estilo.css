@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    
+}        
+
+.num_redondo {
+    background-color: #018ccb;
+    color: #ffffff;
+    width: 120px;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+    padding: 2px;
+    margin: 2px auto;
+}
+
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.day {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.day:hover {
+    transform: scale(1.2);
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.day.header {
+    background-color: #000000;
+    color: white;
+}
+
+.day.fds {
+    background-color: #d45409;
+    color: white;
+
+}
+
+.day.off {
+    background-color: #c0c0c0;
+}
+
+.day.past {
+    background-color: gray;
+    color: aliceblue;
+
+}
+
+.day.hoje {
+    background-color: rgba(133, 253, 129, 0.699);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#funcionarios{
+    position: absolute;
+    left: 80%;
+    top: 3%;           
+    font-size: 20pt;
+    width: 180px;
+
+}
