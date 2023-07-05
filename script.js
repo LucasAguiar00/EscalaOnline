@@ -82,10 +82,10 @@ function atualizar_campo_funcionario(){
     var vectorNames = Object.keys(funcionario)
     var colaborador = document.getElementById("funcionarios").value    
     vectorNames.forEach(element => {
-        if (element!="limpar"){
+        
             colaborador.innerHTML += `<option value="${element}">${element}</option>`
             console.log(element)
-        }        
+                
     });
 
 }
