@@ -79,8 +79,9 @@ function limpar() {
 }
 
 function atualizar_campo_funcionario(){
+    const vectorNames = Object.keys(funcionario)
     var colaborador = document.getElementById("funcionarios").value
-    funcionario.forEach(element => {
+    vectorNames.forEach(element => {
         console.log(element)
     });
 
