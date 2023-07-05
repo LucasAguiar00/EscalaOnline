@@ -83,7 +83,7 @@ function atualizar_campo_funcionario(){
     var colaborador = document.getElementById("funcionarios").value    
     vectorNames.forEach(element => {
         if (element!="limpar"){
-            colaborador += `<option value="${element}">${element}</option>`
+            colaborador.innerHTML += `<option value="${element}">${element}</option>`
             console.log(element)
         }        
     });
