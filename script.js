@@ -78,17 +78,7 @@ function limpar() {
     }
 }
 
-function atualizar_campo_funcionario(){
-    var vectorNames = Object.keys(funcionario)
-    var colaborador = document.getElementById("funcionarios")    
-    vectorNames.forEach(element => {
-        
-            colaborador.innerHTML += `<option value="${element}">${element}</option>`
-            console.log(element)
-                
-    });
 
-}
 
 
 fetch('funcionario.JSON')
@@ -106,4 +96,11 @@ fetch('funcionario.JSON')
 
 // ... adicione mais chamadas à função definirTurno para os demais dias    
 //marcarDiasPassados();
+
+
+window.addEventListener("load", (event) => {
+    atualizar_campo_funcionario()
+    console.log("page is fully loaded");
+  });
+  
 
