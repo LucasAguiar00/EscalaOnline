@@ -104,3 +104,15 @@ window.addEventListener("load", (event) => {
   });
   
 
+function atualizar_campo_funcionario(){
+    var vectorNames = Object.keys(funcionario)
+    var colaborador = document.getElementById("funcionarios")    
+    vectorNames.forEach(element => {
+        
+            colaborador.innerHTML += `<option value="${element}">${element}</option>`
+            console.log(element)
+                
+    });
+
+}
+
