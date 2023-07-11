@@ -98,7 +98,7 @@ fetch('funcionario.JSON')
 //marcarDiasPassados();
 
 
-window.addEventListener("load", (event) => {
+window.addEventListener("onload", (event) => {
     atualizar_campo_funcionario()
     console.log("page is fully loaded");
   });
